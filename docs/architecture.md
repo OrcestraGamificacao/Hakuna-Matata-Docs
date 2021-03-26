@@ -31,9 +31,9 @@ Esse documento tem como objetivo representar as decisões arquiteturais do proje
 
 ## 2 _ Representação da arquitetura
 
-_Inserir imagem_
+- [Mapa de Fluxo de Usuário](https://miro.com/welcomeonboard/2iHOi6nBs54GGnk7okAhqsgGz1I2W2LxUooyu0NdlbJt1AbKWcnf7sZcVlH7kOdT)
 
-[![Diagrama de relações]()]()
+![Mapa de Fluxo de Usuário](./assets/mapaDeFluxo.jpg)
 
 ### 2.1 ReactJS
 
@@ -47,9 +47,6 @@ Node.js é um software de código aberto, multiplataforma, que executa códigos 
 
 Banco de dados NoSQL, baseado em documentos e escrito em C++. Faz uso de documentos similares ao JSON, o que permite alta performance porém mantendo a simplicidade.
 
-### 2.4 Nginx
-
-Proxy reverso e servidor http feito em C. Tem como grande vantagem o fato de lidar com requisições através de uma pipeline baseada em projetos.
 
 ## 3 _ Metas e restrições de arquitetura
 
@@ -105,18 +102,19 @@ _WIP_
 
 ### 5.1 Diagrama de pacotes
 
- - Web
+- Web
 
-_Inserir imagem_
 
-[![Diagrama de pacotes web]()]()
+![Diagrama de pacotes web](./assets/pacotesWeb.png)
+
+- Back
+
+![Diagrama de banco de dados](./assets/pacotesBack.png)
 
 
 ### 5.2 Diagrama de banco de dados
 
-_Inserir imagem_
 
-[![Diagrama de banco de dados]()]()
 
 ### 5.3 Diagrama de classes
 
