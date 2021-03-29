@@ -17,6 +17,7 @@ Os _pull requests_ devem seguir o seguinte padrão:
 * Para o conteúdo do _pull request_, deve ser descrito de forma sucinta.
 
     Neste pull request se realizou:
+    
         * US01;
         * Componentes X e Y;
         * Página Z;

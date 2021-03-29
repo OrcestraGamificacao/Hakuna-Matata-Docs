@@ -3,7 +3,8 @@
 |  Autor | Descrição | Data | Versão |
 |--|--|--|--|
 | [Gabriel Sabanai](https://github.com/Sabanai104) | Tópicos 1 e 2  | 25/03/2021| 0.1 |
-
+| [Gabriel Sabanai](https://github.com/Sabanai104) | Tópicos 3 e 4 | 26/03/2021| 0.2|
+| [Gabriel Sabanai](https://github.com/Sabanai104) e Natan Tavares | Tópico 5| 27/06/2021| 0.3|
 
 ## 1 _ Introdução
 
@@ -14,6 +15,7 @@ Esse documento de arquitetura tem como função mostrar uma visão geral sobre a
 
 
 ### 1.2 Escopo
+
 O Hakuna Matata (nome em desenvolvimento) é uma plataforma web gamificada que tem por objetivo ser um acesso gratuito e interativo a conteúdos do PMI, criados e disponibilizados por Gino Terentim.
 
 Esse documento tem como objetivo representar as decisões arquiteturais do projeto, levando em conta as restrições impostas devido o contexto e visão da aplicação. Estão descritos neste documento especificações de tecnologia como linguagens, frameworks e padrões de projeto. 
@@ -61,9 +63,7 @@ Banco de dados NoSQL, baseado em documentos e escrito em C++. Faz uso de documen
 * A aplicação deverá ser uma plataforma web;
 * Necessita ser executada nos navegadores Google Chrome, Mozilla Firefox, Safari e Opera.
 
-## 4 _ Visões de caso de uso
-
-### 4.1 Mapa de histórias de usuário
+## 4 _ Mapa de Histórias de Usuário
 
 |ÉPICOS| USER STORY | DESCRIÇÃO | PRIORIDADE |
 |-|-|-|-|
@@ -94,30 +94,25 @@ Banco de dados NoSQL, baseado em documentos e escrito em C++. Faz uso de documen
 | Progressão | US25 | Eu, como usuário, gostaria que a narrativa do mapa inicial interagisse comigo para que eu possar ter uma experiencia gamificada.| Must |
 | Progressão | US26 | Eu, como usuário, gostaria que a narrativa das trilhas interagisse comigo para que eu possa ter uma experiencia gamificada.| Must |
 
-### 4.2 Especificações dos Casos de Uso
 
-_WIP_
-
-## 5. Visão Lógica
+## 5 _ Visão Lógica
+A aplicação é baseada na arquitetura de cliente e servidor, ou seja, um computador central vai funcionar como servidor passando as requisições feitas pelos clientes a partir de máquinas que fazem parte da rede de acesso. Dessa forma, a aplicação terá um banco de dados central, o que evita problemas de redundância e contradição e oferece maior segurança por possuir menos pontos de entrada. Assim, é possível adicionar ou remover clientes sem pertubar o funcionamento da rede e suas funcionalidades essenciais.
 
 ### 5.1 Diagrama de pacotes
 
 - Web
 
+O *Front End* será construído por completo utilizando a biblioteca Javascript, [*React Js*](https://pt-br.reactjs.org/). No diagrama abaixo, é possível visualizar a estrutura básica de pacotes da aplicação Front.
 
 ![Diagrama de pacotes web](./assets/pacotesWeb.png)
 
+
 - Back
 
+A aplicação no *Back End* será feita em cima da tecnologia [*Node Js*](https://nodejs.org/en/). O diagrama abaixo exemplifica a estrutura básica do nosso servidor.
 ![Diagrama de banco de dados](./assets/pacotesBack.png)
 
 
 ### 5.2 Diagrama de banco de dados
 
-
-
-### 5.3 Diagrama de classes
-
-_Inserir imagem_
-
-[![Diagrama de classes]()]()
+![Diagrama de Bancos](./assets/diagramadeBancos.png)
