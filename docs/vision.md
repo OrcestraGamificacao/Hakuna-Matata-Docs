@@ -4,6 +4,7 @@
 |--|--|--|--|
 | [Gabriel Sabanai](https://github.com/Sabanai104) | Tópico 1  | 29/03/2021| 0.1 |
 | [Natan Santana](https://github.com/Neitan2001) | Tópico 4.1, 4.2  | 31/03/2021| 0.2 |
+| [Natan Santana](https://github.com/Neitan2001) | Tópico 5.1, 5.2, 5.3, 5.4, 5.5, 5.6, 5.7, 5.8  | 31/03/2021| 0.3 |
 
 ## 1 _ Introdução
 
@@ -43,7 +44,38 @@ Esse produto tem como objetivo democatrizar o acesso à edução relacionada a t
 |  Benefício para o cliente | Recursos de suporte | 
 |--|--|--|--|
 | Acesso gratuito a conteudos de Gerenciamento de Projetos | O usuário poderá assistir vídeos e responder "quizzes" de todos os cursos da plataforma gratuitamente  |
-| Acompanhamento do progresso e evolução | O usuário poderá acompanhar o seu progresso e evolução por meio dos pontos de status que recebe ao ver vídeos e acertar as perguntas dos "quizzes"  |
+| Acompanhamento do progresso e evolução | O usuário poderá acompanhar o seu progresso e evolução por meio dos pontos de status que recebe ao ver vídeos e acertar as perguntas dos "quizzes". Além de receber insígnias das trilhas que foram completas  |
 | Narrativa interativa | O usuário poderá interagir com a narrativa da plataforma, conhecendo personagens que irão ajudá-lo a progredir  |
 | Loja de conteúdos extras | O usuário poderá ganhar moedas ao completar atividades da plataforma para poder desbloquear conteúdos extras  |
 | Assinatura da plataforma | O usuário poderá assinar a plataforma para adiquirir os certificados dos cursos que tiver completado  |
+
+## 5 _ Recursos do produto
+
+### 5.1 Acesso
+    O usuário deve ser capaz de acessar a plataforma através de autenticação por login.
+
+### 5.2 Cadastro
+    O usuário deve ser capaz de realizar o cadastro através da própria aplicação.
+
+### 5.3 Narrativa
+    O usuário deve ser capaz de interagir com a narrativa à medida que navega pela plataforma.
+
+### 5.4 Mapa Inicial
+    O usuário deve ser capaz de vizualizar o mapa inicial e acessar as outras páginas da plataforma por ele.
+
+### 5.5 Trilhas de Conteúdo
+    O usuário deve ser capaz de vizualizar e acessar as trilhas de conteúdo pelo mapa principal, podendo ver os vídeos e responder "quizzes" e desafios.
+
+### 5.6 Pontos de Status, Moedas
+    O usuário deve ganhar pontos de status e moedas ao ver vídeos, responder "quizzes e passar por desafios.
+
+### 5.7 Insígnias
+    O usuário deve ser capaz de ganhar pontos de status e moedas ao ver vídeos, responder "quizzes e passar por desafios. 
+
+### 5.8 Assinatura
+    O usuário deve ser capaz de realizar uma assinatura para receber os certificados dos cursos que concluir.
+
+### 5.9 Perfil de Usuário
+    O usuário deve ser capaz de acessar o próprio perfil para vizualizar e editar as informações pessoais, além de vizualizar pontos de status, moedas, insígnias e certificados.
+
+
