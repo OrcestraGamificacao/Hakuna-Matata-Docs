@@ -145,7 +145,7 @@ A aplicação web poderá ser utilizada por qualquer pessoa por meio de um naveg
 | ------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Aprender gerenciamento de projeto de uma forma menos monotona e cotidiana | Engajar usuários a usar e a se manter na plataforma. | Cursos onlines | Plataforma online gamificada com módulos sobre gerenciamento de projetos. |
 
-### 3.6 Alternativas e concorrẽncia
+### 3.6 Alternativas e concorrência
 
 Se formos levar em consideração apenas as plataformas de ensino gamificada, existem algumas alternativas no Brasil, como a [*Geekie Games*](https://geekiegames.geekie.com.br/) e, fora do Brasil, existe a [*Octalysis Prime*](https://island.octalysisprime.com/#/). Entretanto, ainda não se tem conhecimento de nenhuma plataforma online gamificada focado em ensinar gerenciamento de projeto. Dessa forma, a única alternativa disponivel, atualmente, é por meio de cursos em plataformas de videos como o Youtube e o Coursera.
 
@@ -158,7 +158,7 @@ Esse produto tem como objetivo democatrizar o acesso à edução relacionada a t
 ### 4.2 Resumo dos recursos
 
 |  Benefício para o cliente | Recursos de suporte | 
-|--|--|--|--|
+|--|--|
 | Acesso gratuito a conteudos de Gerenciamento de Projetos | O usuário poderá assistir vídeos e responder "quizzes" de todos os cursos da plataforma gratuitamente  |
 | Acompanhamento do progresso e evolução | O usuário poderá acompanhar o seu progresso e evolução por meio dos pontos de status que recebe ao ver vídeos e acertar as perguntas dos "quizzes". Além de receber insígnias das trilhas que foram completas  |
 | Narrativa interativa | O usuário poderá interagir com a narrativa da plataforma, conhecendo personagens que irão ajudá-lo a progredir  |
