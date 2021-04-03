@@ -6,6 +6,8 @@
 | [Natan Santana](https://github.com/Neitan2001) | Tópico 4.1, 4.2  | 31/03/2021| 0.2 |
 | [Natan Santana](https://github.com/Neitan2001) | Tópico 5.1, 5.2, 5.3, 5.4, 5.5, 5.6, 5.7, 5.8  | 31/03/2021| 0.3 |
 | [Gabriel Sabanai](https://github.com/Sabanai104) | Tópicos 1.2, 1.4, 1.5, 2.1, 2.2, 2.3   | 01/03/2021| 0.4 |
+| [Gabriel Sabanai](https://github.com/Sabanai104) | Tópicos 3.1, 3.2, 3.3, 3.4   | 02/03/2021| 0.5 |
+| [Gabriel Sabanai](https://github.com/Sabanai104) | Tópicos 3.5, 3.6   | 01/03/2021| 0.4 |
 
 ## 1 _ Introdução
 
@@ -128,6 +130,24 @@ A aplicação web poderá ser utilizada por qualquer pessoa por meio de um naveg
 | Responsabilidades    | Ilustrar                                                                                                                                                                                                                                                            |
 | Critérios de Sucesso | Entregar as ilustrações, dentro do prazo estabelecido.                                                                                                                                                                                |
 | Envolvimento         | Alto      
+
+### 3.5 Principais Necessidades da Parte Interessada e do Usuário
+
+#### 3.5.1 Parte Interessada
+
+| Necessidade                                                                                | Prioridade                                                   | Solução atual                                                                                                                                                                                                | Soluções propostas                                                                                                                                 |
+| ------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Uma ferramenta de ensino que auxilie no engajamento e interesse dos usuários em gerenciamento de projeto. | Promover engajamento. | Cursos onlines | Plataforma online gamificada com módulos sobre gerenciamento de projetos. |
+
+#### 3.5.2 Usuário
+
+| Necessidade                                                                                | Prioridade                                                   | Solução atual                                                                                                                                                                                                | Soluções propostas                                                                                                                                 |
+| ------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Aprender gerenciamento de projeto de uma forma menos monotona e cotidiana | Engajar usuários a usar e a se manter na plataforma. | Cursos onlines | Plataforma online gamificada com módulos sobre gerenciamento de projetos. |
+
+### 3.6 Alternativas e concorrẽncia
+
+Se formos levar em consideração apenas as plataformas de ensino gamificada, existem algumas alternativas no Brasil, como a [*Geekie Games*](https://geekiegames.geekie.com.br/) e, fora do Brasil, existe a [*Octalysis Prime*](https://island.octalysisprime.com/#/). Entretanto, ainda não se tem conhecimento de nenhuma plataforma online gamificada focado em ensinar gerenciamento de projeto. Dessa forma, a única alternativa disponivel, atualmente, é por meio de cursos em plataformas de videos como o Youtube e o Coursera.
 
 ## 4 _ Visão geral do produto
 

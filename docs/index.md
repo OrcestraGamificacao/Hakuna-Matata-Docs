@@ -16,7 +16,7 @@ Aqui você será introduzido aos documentos do projeto, para acessa-los basta se
 |Nome | Função |
 | --- | ------ |
 |[Gabriel Sabanai Trindade](https://github.com/Sabanai104)| Gerente de Software|
-|Natan Tavaras Santana| Gerente de Gamificação|
+|[Natan Tavaras Santana](https://github.com/Neitan2001)| Gerente de Gamificação|
 | [Arthur Alves de Matos](https://github.com/Arthur-Matos) | Desenvolvedor |
 
 
