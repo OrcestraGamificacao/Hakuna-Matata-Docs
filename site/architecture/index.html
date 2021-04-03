@@ -1,0 +1,1070 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.6">
+    
+    
+      
+        <title>Documento de Arquitetura - Hakuna Matata - Gino</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.2c0c5eaf.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.7fa14f5b.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="orange" data-md-color-accent="yellow">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#documento-de-arquitetura" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Hakuna Matata - Gino" class="md-header__button md-logo" aria-label="Hakuna Matata - Gino" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Hakuna Matata - Gino
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Documento de Arquitetura
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="md-header__options">
+      
+    </div>
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/orgs/OrcestraGamificacao/teams/hakuna-matata/repositories/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Hakuna Matata
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href=".." class="md-tabs__link">
+      Inicio
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  <li class="md-tabs__item">
+    <a href="./" class="md-tabs__link md-tabs__link--active">
+      Documento de Arquitetura
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../vision/" class="md-tabs__link">
+      Documento de Visão
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../politics/goodHabits/" class="md-tabs__link">
+        Politicas
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Hakuna Matata - Gino" class="md-nav__button md-logo" aria-label="Hakuna Matata - Gino" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Hakuna Matata - Gino
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/orgs/OrcestraGamificacao/teams/hakuna-matata/repositories/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Hakuna Matata
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Inicio
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Documento de Arquitetura
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Documento de Arquitetura
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-_-introducao" class="md-nav__link">
+    1 _ Introdução
+  </a>
+  
+    <nav class="md-nav" aria-label="1 _ Introdução">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-finalidade" class="md-nav__link">
+    1.1 Finalidade
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-escopo" class="md-nav__link">
+    1.2 Escopo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-referencias" class="md-nav__link">
+    1.3 Referências
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-definicoes-acronimos-e-abreviacoes" class="md-nav__link">
+    1.4 Definições, Acrônimos e Abreviações
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-_-representacao-da-arquitetura" class="md-nav__link">
+    2 _ Representação da arquitetura
+  </a>
+  
+    <nav class="md-nav" aria-label="2 _ Representação da arquitetura">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-reactjs" class="md-nav__link">
+    2.1 ReactJS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-nodejs" class="md-nav__link">
+    2.2 NodeJS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-mongodb" class="md-nav__link">
+    2.3 MongoDB
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-_-metas-e-restricoes-de-arquitetura" class="md-nav__link">
+    3 _ Metas e restrições de arquitetura
+  </a>
+  
+    <nav class="md-nav" aria-label="3 _ Metas e restrições de arquitetura">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sao-metas-da-arquitetura" class="md-nav__link">
+    São metas da arquitetura:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sao-restricoes-da-arquitetura" class="md-nav__link">
+    São restrições da arquitetura:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-_-mapa-de-historias-de-usuario" class="md-nav__link">
+    4 _ Mapa de Histórias de Usuário
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-_-visao-logica" class="md-nav__link">
+    5 _ Visão Lógica
+  </a>
+  
+    <nav class="md-nav" aria-label="5 _ Visão Lógica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-diagrama-de-pacotes" class="md-nav__link">
+    5.1 Diagrama de pacotes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-diagrama-de-banco-de-dados" class="md-nav__link">
+    5.2 Diagrama de banco de dados
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vision/" class="md-nav__link">
+        Documento de Visão
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        Politicas
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Politicas" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Politicas
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../politics/goodHabits/" class="md-nav__link">
+        Introdução
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../politics/branchPolitics/" class="md-nav__link">
+        Branch
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../politics/commitPolitics/" class="md-nav__link">
+        Commit
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../politics/prPolitics/" class="md-nav__link">
+        Pull Request
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../politics/issuePolitics/" class="md-nav__link">
+        Issue
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-_-introducao" class="md-nav__link">
+    1 _ Introdução
+  </a>
+  
+    <nav class="md-nav" aria-label="1 _ Introdução">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-finalidade" class="md-nav__link">
+    1.1 Finalidade
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-escopo" class="md-nav__link">
+    1.2 Escopo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-referencias" class="md-nav__link">
+    1.3 Referências
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-definicoes-acronimos-e-abreviacoes" class="md-nav__link">
+    1.4 Definições, Acrônimos e Abreviações
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-_-representacao-da-arquitetura" class="md-nav__link">
+    2 _ Representação da arquitetura
+  </a>
+  
+    <nav class="md-nav" aria-label="2 _ Representação da arquitetura">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-reactjs" class="md-nav__link">
+    2.1 ReactJS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-nodejs" class="md-nav__link">
+    2.2 NodeJS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-mongodb" class="md-nav__link">
+    2.3 MongoDB
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-_-metas-e-restricoes-de-arquitetura" class="md-nav__link">
+    3 _ Metas e restrições de arquitetura
+  </a>
+  
+    <nav class="md-nav" aria-label="3 _ Metas e restrições de arquitetura">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sao-metas-da-arquitetura" class="md-nav__link">
+    São metas da arquitetura:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sao-restricoes-da-arquitetura" class="md-nav__link">
+    São restrições da arquitetura:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-_-mapa-de-historias-de-usuario" class="md-nav__link">
+    4 _ Mapa de Histórias de Usuário
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-_-visao-logica" class="md-nav__link">
+    5 _ Visão Lógica
+  </a>
+  
+    <nav class="md-nav" aria-label="5 _ Visão Lógica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-diagrama-de-pacotes" class="md-nav__link">
+    5.1 Diagrama de pacotes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-diagrama-de-banco-de-dados" class="md-nav__link">
+    5.2 Diagrama de banco de dados
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/orgs/OrcestraGamificacao/teams/hakuna-matata/repositories/edit/master/docs/architecture.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="documento-de-arquitetura">Documento de arquitetura</h1>
+<table>
+<thead>
+<tr>
+<th>Autor</th>
+<th>Descrição</th>
+<th>Data</th>
+<th>Versão</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/Sabanai104">Gabriel Sabanai</a></td>
+<td>Tópicos 1 e 2</td>
+<td>25/03/2021</td>
+<td>0.1</td>
+</tr>
+<tr>
+<td><a href="https://github.com/Sabanai104">Gabriel Sabanai</a></td>
+<td>Tópicos 3 e 4</td>
+<td>26/03/2021</td>
+<td>0.2</td>
+</tr>
+<tr>
+<td><a href="https://github.com/Sabanai104">Gabriel Sabanai</a> e Natan Tavares</td>
+<td>Tópico 5</td>
+<td>27/06/2021</td>
+<td>0.3</td>
+</tr>
+</tbody>
+</table>
+<h2 id="1-_-introducao">1 _ Introdução</h2>
+<h3 id="11-finalidade">1.1 Finalidade</h3>
+<p>Esse documento de arquitetura tem como função mostrar uma visão geral sobre a arquitetura utilizada pelo software do <strong><em>Hakuna Matata</em></strong> (nome em desenvolvimento), ela é uma descrição do sistema que auxilia na compreensão de como o sistema irá se comportar. Portanto, especifica decisões relevantes na produção e implementação do projeto <strong><em>Hakuna Matata</em></strong> em relação a como acontecerá a comunicação dos diversos serviços contidos no software como um todo.</p>
+<h3 id="12-escopo">1.2 Escopo</h3>
+<p>O Hakuna Matata (nome em desenvolvimento) é uma plataforma web gamificada que tem por objetivo ser um acesso gratuito e interativo a conteúdos do PMI, criados e disponibilizados por Gino Terentim.</p>
+<p>Esse documento tem como objetivo representar as decisões arquiteturais do projeto, levando em conta as restrições impostas devido o contexto e visão da aplicação. Estão descritos neste documento especificações de tecnologia como linguagens, frameworks e padrões de projeto. </p>
+<h3 id="13-referencias">1.3 Referências</h3>
+<ul>
+<li><a href="http://www.linhadecodigo.com.br/artigo/3343/como-documentar-a-arquitetura-de-software.aspx">Como documentar a Arquitetura de Software</a></li>
+<li><a href="https://fga-eps-mds.github.io/2019.1-Aix/projeto/2019/03/29/documento-de-arquitetura/">Documento de Arquitetura Aix</a></li>
+</ul>
+<h3 id="14-definicoes-acronimos-e-abreviacoes">1.4 Definições, Acrônimos e Abreviações</h3>
+<ul>
+<li>API - Application Programming Interface: uma série de procedimentos que permite a criação de aplicações que fazem uso de dados e funcionalidades de um outro sistema, aplicação ou serviço.</li>
+<li>REST - Representational State Transfer: Estilo de arquitetura de software que define um conjunto de restrições a serem usadas para a criação de APIs.</li>
+</ul>
+<h2 id="2-_-representacao-da-arquitetura">2 _ Representação da arquitetura</h2>
+<ul>
+<li><a href="https://miro.com/welcomeonboard/2iHOi6nBs54GGnk7okAhqsgGz1I2W2LxUooyu0NdlbJt1AbKWcnf7sZcVlH7kOdT">Mapa de Fluxo de Usuário</a></li>
+</ul>
+<p><img alt="Mapa de Fluxo de Usuário" src="../assets/mapaDeFluxo.jpg" /></p>
+<h3 id="21-reactjs">2.1 ReactJS</h3>
+<p>O React (também denominado React.js ou ReactJS) é uma biblioteca JavaScript de código aberto com foco em criar interfaces de usuário (frontend) em páginas web. Tem como princípio a componentização através do uso da linguagem conhecida com JSX.</p>
+<h3 id="22-nodejs">2.2 NodeJS</h3>
+<p>Node.js é um software de código aberto, multiplataforma, que executa códigos JavaScript no backend/servidor e frontend/interface (dependendo apenas das bibliotecas e dos frameworks usados), baseado no V8 interpretador de JavaScript em C++ do Google, mantido pela fundação Node.js em parceria com a Linux Foundation.</p>
+<h3 id="23-mongodb">2.3 MongoDB</h3>
+<p>Banco de dados NoSQL, baseado em documentos e escrito em C++. Faz uso de documentos similares ao JSON, o que permite alta performance porém mantendo a simplicidade.</p>
+<h2 id="3-_-metas-e-restricoes-de-arquitetura">3 _ Metas e restrições de arquitetura</h2>
+<h3 id="sao-metas-da-arquitetura">São metas da arquitetura:</h3>
+<ul>
+<li>Facilitação no desenvolvimento;</li>
+<li>Independência no desenvolvimento das equipes;</li>
+<li>Clareza no desenvolvimento dos serviços.</li>
+</ul>
+<h3 id="sao-restricoes-da-arquitetura">São restrições da arquitetura:</h3>
+<ul>
+<li>A aplicação deverá ser uma plataforma web;</li>
+<li>Necessita ser executada nos navegadores Google Chrome, Mozilla Firefox, Safari e Opera.</li>
+</ul>
+<h2 id="4-_-mapa-de-historias-de-usuario">4 _ Mapa de Histórias de Usuário</h2>
+<table>
+<thead>
+<tr>
+<th>ÉPICOS</th>
+<th>USER STORY</th>
+<th>DESCRIÇÃO</th>
+<th>PRIORIDADE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cadastro</td>
+<td>US01</td>
+<td>Eu, como usuário, gostaria de me cadastrar na plataforma, para que eu tenha uma conta de acesso a mesma e às suas funcionalidades.</td>
+<td>Must</td>
+</tr>
+<tr>
+<td>Cadastro</td>
+<td>US02</td>
+<td>Eu, como usuário, gostaria de confirmar a criação da minha conta por email para assegurar a criação da mesma.</td>
+<td>Should</td>
+</tr>
+<tr>
+<td>Login</td>
+<td>US03</td>
+<td>Eu, como usuário, gostaria de realizar o Login na plataforma, para que eu possa acessa-lá de fato.</td>
+<td>Must</td>
+</tr>
+<tr>
+<td>Login</td>
+<td>US04</td>
+<td>Eu, como usuário, gostaria de recuperar minha senha por email caso eu a tenha esquecido para que eu possa recuperar o acesso da conta.</td>
+<td>Should</td>
+</tr>
+<tr>
+<td>Perfil</td>
+<td>US05</td>
+<td>Eu, como usuário, gostaria de ter acesso aos meus dados pessoais de perfil, para que eu possá visualiza-los.</td>
+<td>Must</td>
+</tr>
+<tr>
+<td>Perfil</td>
+<td>US06</td>
+<td>Eu, como usuário, gostaria de editar os dados do meu perfil, para que eu possa modifica-los.</td>
+<td>Could</td>
+</tr>
+<tr>
+<td>Perfil</td>
+<td>US07</td>
+<td>Eu, como usuário, gostaria de adicionar uma foto de perfil para que eu possa ter uma foto cadastradas aos meus dados.</td>
+<td>Should</td>
+</tr>
+<tr>
+<td>Perfil</td>
+<td>US08</td>
+<td>Eu, como usuário, gostaria de visualizar meus pontos, minhas moedas e meu status para estar ciente da minha progessão na plataforma.</td>
+<td>Must</td>
+</tr>
+<tr>
+<td>Perfil</td>
+<td>US09</td>
+<td>Eu, como usuário, gostaria de acessar, minhas insignias e certificados para visualizar as trilhas que eu concluí e as certificações que eu comprei.</td>
+<td>Must</td>
+</tr>
+<tr>
+<td>Perfil</td>
+<td>US10</td>
+<td>Eu, como usuário, gostaria de acessar a descrição das minhas insignias para que eu possa estar ciente dos detalhes das mesmas.</td>
+<td>Should</td>
+</tr>
+<tr>
+<td>Perfil</td>
+<td>US11</td>
+<td>Eu, como usuário, gostaria de acessar com detalhes os certificados que eu comprei, para visualizá-los e baixa-los.</td>
+<td>Must</td>
+</tr>
+<tr>
+<td>Mapa Inicial</td>
+<td>US12</td>
+<td>Eu, como usuário, gostaria de acessar o mapa inicial para que eu possa começar a utilizar a aplicação e visualizar/interagir com a interface..</td>
+<td>Must</td>
+</tr>
+<tr>
+<td>Mapa Inicial</td>
+<td>US13</td>
+<td>Eu, como usuário, gostaria de ser introduzido a um tutorial no meu primeiro acesso para que eu possa entender como utilizar a aplicação.</td>
+<td>Could</td>
+</tr>
+<tr>
+<td>Trilhas</td>
+<td>US14</td>
+<td>Eu, como usuário, gostaria de acessar as trilhas para vizualizar seus conteúdos.</td>
+<td>Must</td>
+</tr>
+<tr>
+<td>Trilhas</td>
+<td>US15</td>
+<td>Eu, como usuário, gostaria de acessar e assistir os conteudos das trilhas para adquirir conhecimento do assunto de tal trilha.</td>
+<td>Must</td>
+</tr>
+<tr>
+<td>Trilhas</td>
+<td>US16</td>
+<td>Eu, como usuário, gostaria de responder os quizes que aparecerem durante os videos de conteudo e após, para que possa fixar meu conhecimento.</td>
+<td>Must</td>
+</tr>
+<tr>
+<td>Desafios</td>
+<td>US17</td>
+<td>Eu, como usuário, gostaria de realizar o desafio final para que eu possa testar meus conhecimentos gerais.</td>
+<td>Must</td>
+</tr>
+<tr>
+<td>Desafios</td>
+<td>US18</td>
+<td>Eu, como usuário, gostaria de realizar o desafio final da trilha para que eu possa testar meus conhecimentos do módulo.</td>
+<td>Should</td>
+</tr>
+<tr>
+<td>Pontuação e Recompensa</td>
+<td>US19</td>
+<td>Eu, como usuário, gostaria de ganhar pontos de status ao concluir tarefas para que eu possa receber um feedback do meu desenvolvimento</td>
+<td>Should</td>
+</tr>
+<tr>
+<td>Pontuação e Recompensa</td>
+<td>US20</td>
+<td>Eu, como usuário, gostaria de ganhar moedas ao concluir tarefas para que eu possa adiquirir outros materiais de conhecimento.</td>
+<td>Should</td>
+</tr>
+<tr>
+<td>Pontuação e Recompensa</td>
+<td>US21</td>
+<td>Eu, como usuário, gostaria de ganhar insígnias ao concluir os desafios das trilhas para registrar a minha progressão e evolução na plataforma</td>
+<td>Should</td>
+</tr>
+<tr>
+<td>Pontuação e Recompensa</td>
+<td>US22</td>
+<td>Eu, como usuário, gostaria de poder comprar meus certificados após concluir os desafios, para que eu tenha registrado que eu tenho conhecimento daquele modulo.</td>
+<td>Should</td>
+</tr>
+<tr>
+<td>Pontuação e Recompensa</td>
+<td>US23</td>
+<td>Eu, como usuário, gostaria de poder assinar a plataforma para obter os certificados das trilhas e ajudar a arrecar dinheiro para ONG's.</td>
+<td>Should</td>
+</tr>
+<tr>
+<td>Pontuação e Recompensa</td>
+<td>US24</td>
+<td>Eu, como usuario, gostaria de ter acesso a uma loja para que eu possa comprar materiais extras com as moedas que eu fui adiquirindo.</td>
+<td>Should</td>
+</tr>
+<tr>
+<td>Progressão</td>
+<td>US25</td>
+<td>Eu, como usuário, gostaria que a narrativa do mapa inicial interagisse comigo para que eu possar ter uma experiencia gamificada.</td>
+<td>Must</td>
+</tr>
+<tr>
+<td>Progressão</td>
+<td>US26</td>
+<td>Eu, como usuário, gostaria que a narrativa das trilhas interagisse comigo para que eu possa ter uma experiencia gamificada.</td>
+<td>Must</td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-_-visao-logica">5 _ Visão Lógica</h2>
+<p>A aplicação é baseada na arquitetura de cliente e servidor, ou seja, um computador central vai funcionar como servidor passando as requisições feitas pelos clientes a partir de máquinas que fazem parte da rede de acesso. Dessa forma, a aplicação terá um banco de dados central, o que evita problemas de redundância e contradição e oferece maior segurança por possuir menos pontos de entrada. Assim, é possível adicionar ou remover clientes sem pertubar o funcionamento da rede e suas funcionalidades essenciais.</p>
+<h3 id="51-diagrama-de-pacotes">5.1 Diagrama de pacotes</h3>
+<ul>
+<li>Web</li>
+</ul>
+<p>O <em>Front End</em> será construído por completo utilizando a biblioteca Javascript, <a href="https://pt-br.reactjs.org/"><em>React Js</em></a>. No diagrama abaixo, é possível visualizar a estrutura básica de pacotes da aplicação Front.</p>
+<p><img alt="Diagrama de pacotes web" src="../assets/pacotesWeb.png" /></p>
+<ul>
+<li>Back</li>
+</ul>
+<p>A aplicação no <em>Back End</em> será feita em cima da tecnologia <a href="https://nodejs.org/en/"><em>Node Js</em></a>. O diagrama abaixo exemplifica a estrutura básica do nosso servidor.
+<img alt="Diagrama de banco de dados" src="../assets/pacotesBack.png" /></p>
+<h3 id="52-diagrama-de-banco-de-dados">5.2 Diagrama de banco de dados</h3>
+<p><img alt="Diagrama de Bancos" src="../assets/diagramadeBancos.png" /></p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href=".." class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Inicio
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../vision/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Documento de Visão
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2021 Hakuna Matata
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.fb4a9340.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.a1c7c35e.min.js"></script>
+      
+    
+  </body>
+</html>

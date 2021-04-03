@@ -1,0 +1,11 @@
+body {
+    background-color: whitesmoke;
+}
+.md-typeset__table table {
+    border-radius: 10px !important;
+}
+
+.md-typeset__table thead {
+    background-color: #8c92ac;
+    opacity: 100% !important;
+}

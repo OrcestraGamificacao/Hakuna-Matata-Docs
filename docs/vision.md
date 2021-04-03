@@ -82,6 +82,53 @@ Dessa forma, pode-se acreditar que, em meio a essa crise, investir em uma plataf
 | O Hakuna Matata (nome em desenvolvimento) | Problema se encontra na vontade em criar uma plataforma de ensino web gamificada.                                                     |
 | Que               | Visa aumentar o engajamento, o retorno e o conhecimento do usuário durante seu momento de aprendizagem. |
 
+## 3 _ Descrição dos Envolvidos e dos Usuários
+
+### 3.1 Resumo dos Envolvidos
+
+|  Nome | Descrição | Responsabilidades |
+|--|--|--|
+| Time de desenvolvimento | Equipe de membros da Orc'estra Gamificação, Empresa Júnior de Engenharia de Software da UnB | Responsáveis por desenvolver a aplicação web |
+| Gino Terentim | Idealizador da ideia e presidente da PMI DF | Responsável pela criação dos materiais e conteúdos disponiveis na plataforma  |
+| Time de ilustrações | Equipe de membros da Lamparina Design, Empresa Júnior de Desenho Industrial da UnB  | Responsáveis pelas ilustrações da aplicação web |
+
+### 3.2 Resumo dos Usuários
+
+|  Nome | Descrição | Responsabilidades |
+|--|--|--|
+| Usuários interessados em gerenciamento de projetos | Pessoas que desejam aprender sobre gerenciamento de projetos, utilizando uma plataforma gamificada | Responsáveis por utilizar o sistema para aprender sobre gerenciamento de projeto por meio de uma experiência interativa, dinâmica e progressiva |
+
+
+### 3.3 Ambiente do Usuário
+
+A aplicação web poderá ser utilizada por qualquer pessoa por meio de um navegador web presente no computador de cada usuário. A interação do usuário com a plataforma se dará unica e exclusivamente por meio de um navegador.
+
+
+### 3.4 Perfis dos Envolvidos
+
+#### 3.4.1 Equipe de desenvolvimento 
+
+
+|                      |                                                                                                                                                                                                                                                                        |
+| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Representantes       | [Gabriel Sabanai](https://github.com/Sabanai104) <br> [Natan Tavares](https://github.com/Neitan2001) <br> [Arthur Matos](https://github.com/Arthur-Matos) |
+| Descrição            | Equipe responsável pelo desenvolvimento da aplicação web.                                                                                                                                                                                                                   |
+| Tipo                 | Membros da Orc'estra Gamificação                                                                                                                                      |
+| Responsabilidades    | Desenvolver                                                                                                                                                                                                                                                            |
+| Critérios de Sucesso | Entregar a aplicação, com os requisitos atendidos, dentro do prazo estabelecido.                                                                                                                                                                                |
+| Envolvimento         | Alto      
+
+#### 3.4.2 Equipe de Ilustração
+
+|                      |                                                                                                                                                                                                                                                                        |
+| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Representantes       | Luma Lima <br> A declarar <br> A declarar |
+| Descrição            | Equipe responsável pelo criação das ilustrações.                                                                                                                                                                                                                  |
+| Tipo                 | Membros da Lamparina Design                                                                                                                                      |
+| Responsabilidades    | Ilustrar                                                                                                                                                                                                                                                            |
+| Critérios de Sucesso | Entregar as ilustrações, dentro do prazo estabelecido.                                                                                                                                                                                |
+| Envolvimento         | Alto      
+
 ## 4 _ Visão geral do produto
 
 ### 4.1 Perspectiva do produto
